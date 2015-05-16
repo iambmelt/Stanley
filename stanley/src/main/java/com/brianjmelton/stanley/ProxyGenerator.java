@@ -12,20 +12,32 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import retrofit.Utils;
-
 public class ProxyGenerator {
 
     private final Map<Class<?>, Map<Method, MethodInfo>> proxyMethodInfoCache = new LinkedHashMap<>();
 
     @SuppressWarnings("unchecked")
     public <T> T create(Context context, Class<T> proxy) {
-        Utils.validateServiceClass(proxy);
+        checkIsInterface(proxy);
+        checkIsNotExtendingAnotherInterface(proxy);
         return (T) Proxy.newProxyInstance(
                 proxy.getClassLoader(),
                 new Class<?>[]{proxy},
                 new SharedPreferencesHandler(context, proxy,
                         getMethodInfoCache(proxy)));
+    }
+
+    private <T> void checkIsNotExtendingAnotherInterface(Class<T> proxy) {
+        if (0 < proxy.getInterfaces().length) {
+            throw new IllegalArgumentException(
+                    "Interfaces extending other interfaces are not supported at this time");
+        }
+    }
+
+    private static <T> void checkIsInterface(Class<T> clazz) {
+        if (!clazz.isInterface()) {
+            throw new IllegalArgumentException("Proxy must be defined by annotating an interface");
+        }
     }
 
     private Map<Method, MethodInfo> getMethodInfoCache(Class<?> proxy) {
