@@ -2,4 +2,4 @@ language: android
 components:
     - platform-tools
     - tools
-    - android-21
+    - android-22
