@@ -1,4 +1,6 @@
 # Stanley
+[![Build Status](https://travis-ci.org/iambmelt/Stanley.svg?branch=master)](https://travis-ci.org/iambmelt/Stanley)
+
 Convenient stashing of simple data formats in SharedPreferences
 
 Example
