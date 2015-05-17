@@ -1,0 +1,14 @@
+language: android
+android:
+   components:
+   - platform-tools
+   - android-22
+   - build-tools-22.0.1
+
+jdk: oraclejdk7
+
+notifications:
+  email: 
+    - iambmelton@gmail.com
+script:
+  - ./gradlew clean build
