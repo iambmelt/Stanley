@@ -22,7 +22,7 @@ And go!
 
 Download
 ========
-// TODO
+Gradle support coming soon.
 
 License
 =======
