@@ -4,12 +4,12 @@ android:
    - platform-tools
    - android-22
    - build-tools-22.0.1
-   - extra
+   #- extra
 
 jdk: oraclejdk7
 
 notifications:
-  email: false
-
+  email: 
+    - iambmelton@gmail.com
 script:
   - ./gradlew clean build
