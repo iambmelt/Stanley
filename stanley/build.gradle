@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'bintray-release'
 
 android {
     compileSdkVersion 22
@@ -7,7 +8,7 @@ android {
     defaultConfig {
         minSdkVersion 8
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     buildTypes {
         release {
@@ -17,4 +18,20 @@ android {
     }
 }
 
-dependencies {}
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.2.10'
+    }
+}
+
+publish {
+    userOrg = 'iambmelton'
+    groupId = 'com.brianjmelton'
+    artifactId = 'stanley'
+    publishVersion = '1.0.0'
+    description = 'Convenient stashing of simple data formats in SharedPreferences'
+    website = 'https://github.com/iambmelt/Stanley'
+}
