@@ -1,5 +1,6 @@
 # Stanley
 [![Build Status](https://travis-ci.org/iambmelt/Stanley.svg?branch=master)](https://travis-ci.org/iambmelt/Stanley)
+[ ![Download](https://api.bintray.com/packages/iambmelton/maven/stanley/images/download.svg) ](https://bintray.com/iambmelton/maven/stanley/_latestVersion)
 
 Convenient stashing of simple data formats in SharedPreferences
 
@@ -24,7 +25,7 @@ And go!
 
 Download
 ========
-Gradle support coming soon.
+compile 'com.brianjmelton:stanley:1.0.0'
 
 License
 =======
