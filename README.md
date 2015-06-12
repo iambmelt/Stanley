@@ -25,7 +25,7 @@ And go!
 
 Download
 ========
-compile 'com.brianjmelton:stanley:1.0.0'
+```compile 'com.brianjmelton:stanley:1.0.0'```
 
 License
 =======
