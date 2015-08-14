@@ -108,7 +108,7 @@ public class ProxyGenerator {
                 return methodInfo.type.get(sharedPreferences, methodInfo);
             } else {
                 // setter
-                Class<?> paramType = args[0].getClass();
+                Class<?> paramType = method.getParameterTypes()[0];
                 persistenceDelegates.get(paramType)
                         .persist(sharedPreferences.edit(), methodInfo.key, args[0]);
             }
