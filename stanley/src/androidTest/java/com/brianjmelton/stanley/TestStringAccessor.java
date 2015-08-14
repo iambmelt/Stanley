@@ -2,6 +2,13 @@ package com.brianjmelton.stanley;
 
 public class TestStringAccessor extends AbstractTest {
 
+    public void testSetStringNull() throws Exception {
+        final String expectedNull = null;
+        proxy.setString(expectedNull);
+        String result = sharedPreferences.getString("String", null);
+        assertNull(result);
+    }
+
     public void testSetString() throws Exception {
         final String expected = "test string";
         proxy.setString(expected);
