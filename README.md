@@ -9,19 +9,25 @@ Example
 
 Define an interface
 
-    @Proxy(name = "Prefs", mode = Context.MODE_PRIVATE)
-    public interface PersonProxy {
-        @Accessor
-        void setName(String name);
-    }
+```java
+@Proxy(name = "Prefs", mode = Context.MODE_PRIVATE)
+public interface PersonProxy {
+    @Accessor
+    void setName(String name);
+}
+```
 
 Make an instance
 
-    PersonProxy proxy = new ProxyGenerator().create(Context.this, PersonProxy.class);
+```java
+PersonProxy proxy = new ProxyGenerator().create(Context.this, PersonProxy.class);
+```
 
 And go!
 
-    proxy.setName("Fred");
+```java
+proxy.setName("Fred");
+```
 
 Download
 ========
