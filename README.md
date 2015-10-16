@@ -11,22 +11,22 @@ Define an interface
 
 ```java
 @Proxy(name = "Prefs", mode = Context.MODE_PRIVATE)
-public interface PersonProxy {
+public interface Person {
     @Accessor
-    void setName(String name);
+    void setLastName(String name);
 }
 ```
 
 Make an instance
 
 ```java
-PersonProxy proxy = new ProxyGenerator().create(Context.this, PersonProxy.class);
+Person elvis = new ProxyGenerator().create(Context.this, Person.class);
 ```
 
 And go!
 
 ```java
-proxy.setName("Fred");
+elvis.setLastName("presley");
 ```
 
 Download
