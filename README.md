@@ -1,6 +1,6 @@
 # Stanley
 [![Build Status](https://travis-ci.org/iambmelt/Stanley.svg?branch=master)](https://travis-ci.org/iambmelt/Stanley)
-[ ![Download](https://api.bintray.com/packages/iambmelton/maven/stanley/images/download.svg) ](https://bintray.com/iambmelton/maven/stanley/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/iambmelton/maven/stanley/images/download.svg) ](https://bintray.com/iambmelton/maven/stanley/_latestVersion)[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Stanley-green.svg?style=flat)](https://android-arsenal.com/details/1/2647)
 
 Convenient stashing of simple data formats on Android with SharedPreferences
 
