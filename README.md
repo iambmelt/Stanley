@@ -20,7 +20,7 @@ public interface Person {
 Make an instance
 
 ```java
-Person elvis = new ProxyGenerator().create(Context.this, Person.class);
+Person elvis = new ProxyGenerator().create(context, Person.class);
 ```
 
 And go!
